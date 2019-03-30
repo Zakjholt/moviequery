@@ -21,13 +21,15 @@ docker-compose up
 ## To Run (native)
 
 Run the server:
+
 ```
 cd api
 npm install
 npm run start
 ```
 
-Run the app:
+(in another session) Run the app:
+
 ```
 cd app
 npm install
