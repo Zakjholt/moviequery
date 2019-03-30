@@ -1,9 +1,11 @@
 import React, { useState, useCallback, useRef } from 'react'
 import { useQuery } from 'react-apollo-hooks'
 import { debounce } from 'lodash'
+import classnames from 'classnames'
 
 import { QUERY_MOVIES } from 'src/movies/graphql/queries'
 import MovieQueryResultsList from 'src/movies/components/QueryResultsList'
+import styles from './styles'
 
 const useDebouncedQueryRef = () => {
   /*
@@ -24,7 +26,7 @@ const SearchPage = () => {
   const [inputRef, query, debouncedHandler] = useDebouncedQueryRef()
 
   return (
-    <div className="container">
+    <div className={classnames('section', styles.container)}>
       <input
         className="input"
         type="text"

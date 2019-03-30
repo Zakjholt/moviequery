@@ -1,0 +1,36 @@
+.container {
+  padding-top: 1em;
+  display: grid;
+  grid-template-areas:
+    'title title title'
+    'details details metadata';
+  grid-gap: 1.2em;
+}
+
+.title {
+  grid-area: title;
+}
+
+.details {
+  grid-area: details;
+}
+
+.metadata {
+  grid-area: metadata;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .container {
+    grid-template-areas:
+      'title'
+      'details'
+      'metadata';
+  }
+}

@@ -3,7 +3,7 @@ const axios = require('axios')
 const { MOVIE_DB_KEY } = require('../conf')
 
 const movieDbAxios = axios.create({
-  baseURL: 'https://api.themoviedb.org/4',
+  baseURL: 'https://api.themoviedb.org/',
   params: {
     api_key: MOVIE_DB_KEY
   }
@@ -12,7 +12,7 @@ const movieDbAxios = axios.create({
 const getPopularMovies = async (page = 1) => {
   try {
     const { data } = await movieDbAxios(
-      '/discover/movie?sort_by=popularity.desc',
+      '4/discover/movie?sort_by=popularity.desc',
       { params: { page } }
     )
 
@@ -31,7 +31,7 @@ const queryMovies = async (query, page = 1) => {
   }
 
   try {
-    const { data } = await movieDbAxios('/search/movie', {
+    const { data } = await movieDbAxios('4/search/movie', {
       params: { query, page }
     })
 
@@ -43,4 +43,14 @@ const queryMovies = async (query, page = 1) => {
   }
 }
 
-module.exports = { getPopularMovies, queryMovies }
+getMovieDetails = async id => {
+  try {
+    const { data } = await movieDbAxios(`3/movie/${id}`)
+
+    return data
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+module.exports = { getPopularMovies, queryMovies, getMovieDetails }

@@ -1,10 +1,46 @@
 .container {
   padding: 1.5em;
   display: grid;
+  grid-template-areas:
+    'results'
+    'controls';
+}
+
+.results {
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1em;
+  grid-area: results;
 
-  @media screen and (max-width: 545px) {
+  // Overwrites a bulma style for the last child
+  :global {
+    .box {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.controls {
+  grid-area: controls;
+  display: flex;
+  justify-content: center;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+
+  ~ .control {
+    margin-left: 1.2em;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .results {
     grid-template-columns: 1fr;
 
     padding: 1em 0 0;
