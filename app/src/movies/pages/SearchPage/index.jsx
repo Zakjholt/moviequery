@@ -26,6 +26,8 @@ const SearchPage = () => {
   return (
     <div className="container">
       <input
+        className="input"
+        type="text"
         ref={inputRef}
         onChange={debouncedHandler}
         placeholder="Search movies"

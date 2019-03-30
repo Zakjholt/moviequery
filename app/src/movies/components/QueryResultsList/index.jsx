@@ -4,6 +4,7 @@ import { useQuery } from 'react-apollo-hooks'
 
 import { QUERY_MOVIES } from 'src/movies/graphql/queries'
 import MovieListItem from 'src/movies/components/ListItem'
+import styles from './styles.scss'
 
 /**
  * Props
@@ -27,7 +28,7 @@ const QueryResultsList = ({ query }) => {
   } = data
 
   return (
-    <div className="tile is-ancestor">
+    <div className={styles.container}>
       {results.map(m => (
         <MovieListItem movie={m} key={m.id} />
       ))}
