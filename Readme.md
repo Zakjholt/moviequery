@@ -23,11 +23,13 @@ docker-compose up
 Run the server:
 ```
 cd api
+npm install
 npm run start
 ```
 
 Run the app:
 ```
 cd app
+npm install
 npm run start
 ```
