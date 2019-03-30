@@ -1,11 +1,18 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
 /**
  * Props
  * {
- *  id: Movie['id']
+ *  match {
+ *    params: {
+ *     id: Movie['id']
+ *    }
+ *  }
  * }
  */
-const DetailsPage = ({ id }) => <div>details for {id}</div>
+const DetailsPage = ({ match: { params } }) => (
+  <div>details for {params.id}</div>
+)
 
-export default DetailsPage
+export default withRouter(DetailsPage)

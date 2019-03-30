@@ -1,5 +1,7 @@
 import React from 'react'
-import Poster from 'src/components/movies/Poster'
+import { Link } from 'react-router-dom'
+
+import Poster from 'src/movies/components/Poster'
 
 /**
  * Props
@@ -9,9 +11,10 @@ import Poster from 'src/components/movies/Poster'
  */
 
 const ListItem = ({ movie }) => (
-  <div>
+  <Link to={`/details/${movie.id}`} className="box tile is-4">
     <div>{movie.title}</div>
-  </div>
+    <Poster poster_path={movie.poster_path} />
+  </Link>
 )
 
-export default ListIiem
+export default ListItem

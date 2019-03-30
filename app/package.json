@@ -7,7 +7,7 @@
     "start": "npm run build && npm run serve",
     "serve": "serve dist",
     "build": "parcel build src/index.html",
-    "dev": "parcel src/index.html",
+    "dev": "parcel --port 5000 src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "alias": {
@@ -20,9 +20,15 @@
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
-    "hookrouter": "^1.0.3-beta",
+    "apollo-boost": "^0.3.1",
+    "bulma": "^0.7.4",
+    "graphql": "^14.2.0",
+    "graphql-tag": "^2.10.1",
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
+    "react-apollo-hooks": "^0.4.4",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
     "serve": "^10.1.2"
   }
 }
