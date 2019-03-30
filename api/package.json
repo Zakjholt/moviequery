@@ -13,5 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "axios": "^0.18.0",
+    "graphql": "^14.2.0"
   }
 }
