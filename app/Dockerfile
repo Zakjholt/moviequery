@@ -7,7 +7,7 @@ COPY package-lock.json package-lock.json
 
 RUN npm install
 
-COPY serve.json serve.json
+COPY .postcssrc .postcssrc
 COPY src src
 
 CMD npm run start

@@ -8,6 +8,8 @@ services:
       - '5001:5001'
   app:
     build: ./app
+    depends_on:
+      - api
     environment:
       - API_URL=http://localhost:5001
     ports:
