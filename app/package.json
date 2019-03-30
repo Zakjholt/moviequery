@@ -17,6 +17,9 @@
     "parcel-bundler": "^1.12.3"
   },
   "dependencies": {
+    "hookrouter": "^1.0.3-beta",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "serve": "^10.1.2"
   }
 }
