@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPosterSrc } from '~/src/movies/util/images'
+import { getPosterSrc } from 'src/movies/util/images'
 
 /**
  * Props

@@ -1,5 +1,5 @@
 import React from 'react'
-import Poster from '~/src/components/movies/Poster'
+import Poster from 'src/components/movies/Poster'
 
 /**
  * Props
