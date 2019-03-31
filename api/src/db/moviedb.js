@@ -19,8 +19,6 @@ const getPopularMovies = async (page = 1) => {
     return data
   } catch (err) {
     console.log(err.message)
-
-    return []
   }
 }
 
@@ -38,8 +36,6 @@ const queryMovies = async (query, page = 1) => {
     return data
   } catch (err) {
     console.log(err.message)
-
-    return []
   }
 }
 
